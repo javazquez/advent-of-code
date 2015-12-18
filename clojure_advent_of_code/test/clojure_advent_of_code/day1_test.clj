@@ -1,7 +1,7 @@
-(ns clojure-advent-of-code.core-test
+(ns clojure-advent-of-code.day1-test
   (:require [clojure.test :refer :all]
             [clojure.java.io :as io]
-            [clojure-advent-of-code.core :refer :all]
+            [clojure-advent-of-code.day1 :refer :all]
             [clojure.string :as clstr])
             )
 
@@ -40,6 +40,7 @@
 (deftest solution1-final-floor
   (testing "that final floor is 280"
     (is (= (calculate-floor floor-text) 280))))
+
 
 (deftest solution2-find-1st-basement
   (testing "that first basement floor occurance"
