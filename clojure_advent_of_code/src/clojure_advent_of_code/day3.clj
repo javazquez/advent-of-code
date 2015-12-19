@@ -19,9 +19,6 @@
       (reductions move (map direction-map dir-str))
       [0 0] ))
 
-(defn all-houses [ dir-str]
-  (count (all-coords dir-str)))
-
 (defn at-least-1-pres [ dir-str]
   (count (set (all-coords dir-str))))
 
