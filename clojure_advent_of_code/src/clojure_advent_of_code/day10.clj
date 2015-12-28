@@ -5,8 +5,7 @@
   (clstr/join
     (map
         #(str (count (first %)) (ffirst %))
-        (re-seq #"(\d)\1+|\d"
-        input-str))))
+        (re-seq #"(\d)\1+|\d" input-str))))
 
 (def sol-list (iterate look-and-say "3113322113"))
 
