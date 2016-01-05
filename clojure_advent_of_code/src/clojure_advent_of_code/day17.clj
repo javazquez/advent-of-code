@@ -22,6 +22,6 @@
   (count (gen-combo containers)))
 
 (defn solve-part-2 [lst]
-   (let [sol-list (apply concat (filter not-empty (my-combo lst 150)))
+   (let [sol-list (gen-combo lst)
          min-cnt (apply min (map count  sol-list ))]
          (count (filter #(= min-cnt (count  %)) sol-list))))
