@@ -1,4 +1,4 @@
 # AdventOfCode
 
-Elixir Soltions to  http://adventofcode.com/2016
+Elixir Solutions to  http://adventofcode.com/2016
 
