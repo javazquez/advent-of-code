@@ -1,3 +1,5 @@
+# Juan Vazquez
+# http://javazquez.com
 # http://adventofcode.com/2016/day/1
 defmodule Day01 do
     def distance(directions , move_list_tuple \\ [{:north, 0 , 0}] )
