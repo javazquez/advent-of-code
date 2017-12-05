@@ -6,6 +6,7 @@
        (apply distinct? ))) 
 
 (defn anagram?
+  "sorting the string makes comparison super easy"
   [pass-str]
   (->> (clojure.string/split pass-str #"\s+")
        (map sort)
