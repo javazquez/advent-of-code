@@ -10,7 +10,33 @@ const {
 } = require("../src/day3");
 
 test("generate X coords", () => {
-  expect(generateRPoints([0, 0], 15)[0].length).toBe(16);
+  let t = new Array([0, 0].toString());
+  generateRPoints([0, 0], 15, t);
+  expect(t.length).toBe(16);
+});
+
+test("given negative point case", () => {
+  const inputA = ["D2", "L4"];
+  const inputB = ["L4", "D2"];
+  const aPoints = mapPoints(inputA);
+  const bPoints = mapPoints(inputB);
+  //   console.log(aPoints, bPoints);
+
+  let intersection = aPoints.filter(
+    x => bPoints.find(y => y === x) && x !== "0,0"
+  );
+  let min = Number.MAX_SAFE_INTEGER;
+  intersection.forEach(el => {
+    let stepsA = numberOfStepsforPoint(el, aPoints);
+    let stepsB = numberOfStepsforPoint(el, bPoints);
+    if (stepsA + stepsB < min) {
+      min = stepsA + stepsB;
+    }
+  });
+
+  expect(intersection.length).toBe(1);
+  expect(Math.min(...closestNeighbor(intersection))).toBe(6);
+  expect(min).toBe(12);
 });
 
 test("given use case", () => {
@@ -52,9 +78,10 @@ test("use test input for wires", () => {
   const aPoints = mapPoints(testLineA);
   const bPoints = mapPoints(testLineB);
 
-  let intersection = aPoints.filter(
-    x => bPoints.find(y => y === x) && x !== "0,0"
+  let intersection = aPoints.filter(x =>
+    bPoints.find(y => y === x && x !== "0,0")
   );
+
   let min = Number.MAX_SAFE_INTEGER;
   intersection.forEach(el => {
     let stepsA = numberOfStepsforPoint(el, aPoints);
@@ -117,8 +144,8 @@ test("Solve Day 3 A", done => {
     const [lineA, lineB] = txt.toString().split(/\n/);
     const aPoints = mapPoints(lineA.split(/,/));
     const bPoints = mapPoints(lineB.split(/,/));
-    const intersection = aPoints.filter(
-      x => bPoints.find(y => y === x) && x !== "0,0"
+    const intersection = aPoints.filter(x =>
+      bPoints.find(y => y === x && x !== "0,0")
     );
 
     let min = Number.MAX_SAFE_INTEGER;
@@ -129,9 +156,11 @@ test("Solve Day 3 A", done => {
       if (sum < min) {
         min = sum;
       }
-      const day3Answer = Math.min(...closestNeighbor(intersection));
-      expect(day3Answer).toBe(557);
     });
+
+    expect(min).toBe(56410);
+    const day3Answer = Math.min(...closestNeighbor(intersection));
+    expect(day3Answer).toBe(557);
     done();
   });
 });

@@ -1,0 +1,17 @@
+{
+  "name": "adventofcode_2019_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "acorn": "^7.1.0",
+    "jest": "^24.9.0",
+    "prettier-eslint": "^9.0.1"
+  }
+}
