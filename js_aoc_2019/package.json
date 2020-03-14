@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "jest": "^24.9.0",
     "prettier-eslint": "^9.0.1"
   }
