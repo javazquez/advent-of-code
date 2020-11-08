@@ -6,5 +6,6 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [digest "1.4.4"]
                  [instaparse "1.4.1"]
+                 [org.clojure/core.logic "1.0.0"]
                  [org.clojure/data.json "1.0.0"]
                  [org.clojure/math.combinatorics "0.1.1"]])
