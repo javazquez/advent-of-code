@@ -16,7 +16,7 @@
   (is (= 251
          (->> (visit-all-places santa-cities)
               (map #(mapcat (fn [city-pair]
-                              (find-distances city-pair)) %))
+                              (find-puzzle-distances city-pair)) %))
               (map (partial reduce +))
               (apply min)))))
 
@@ -24,7 +24,7 @@
   (is (= 898
          (->> (visit-all-places santa-cities)
               (map #(mapcat (fn [city-pair]
-                              (find-distances city-pair)) %))
+                              (find-puzzle-distances city-pair)) %))
               (map (partial reduce +))
               (apply max)))))
 

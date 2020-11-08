@@ -79,6 +79,6 @@
       (pldb/db-fact distance 'Norrath  'Arbre  135)
       (pldb/db-fact distance 'Straylight  'Arbre  127)))
 
-(def find-distances 
+(def find-puzzle-distances 
   (distance-between-cities santa-city-db)) ;; get all the distances for puzzle input
 
