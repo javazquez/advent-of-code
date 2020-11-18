@@ -64,4 +64,4 @@
 (defn deer-race
   "each letter represents a reindeers seq,  {:name n , :total-distance}"
   [[a b c d e f g h i]]
-  (map chicken-dinner a b c d e f g h i));; how to pass the deer name and distance
+  (map chicken-dinner a b c d e f g h i))
