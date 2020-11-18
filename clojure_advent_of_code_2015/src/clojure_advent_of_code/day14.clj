@@ -3,7 +3,7 @@
 (def fly (repeat 1))
 (def fly2 (iterate inc 1))
 (def break (repeat 0))
-(def vixen-flight {:name "vixen", :t-distance 0, :d 19 ,:flight (repeat (concat (take 7 fly) (take 124 break)))})
+(def vixen-flight {:name "vixen" :t-distance 0 :d 19 :flight (repeat (concat (take 7 fly) (take 124 break)))})
 (def rudolph-flight {:name "rudolph" :t-distance 0 :d 3 :flight (repeat (concat (take 15 fly) (take 28 break)))})
 (def donner-flight {:name "donner" :t-distance 0 :d 19 :flight (repeat (concat (take 9 fly) (take 164 break)))})
 (def blitzen-flight {:name "blitzen" :t-distance 0 :d 19 :flight (repeat (concat (take 9 fly) (take 158 break)))})
