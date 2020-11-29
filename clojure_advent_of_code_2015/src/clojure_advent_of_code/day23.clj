@@ -2,11 +2,9 @@
   (:require [clojure.java.io :as io]))
 
 ;; NOTE change a = 1 for part 2 and run again for puzzle answer
-
-(def registers (atom {(read-string "a") 0
+(def registers (atom {(read-string "a") 0    ;;<--- change to 1 and delete this comment
                       (read-string "b") 0
                       :stack-ptr 0}))
-
 
 (def puzzle-input (line-seq (io/reader (io/resource "Day23.txt"))))
 
@@ -34,12 +32,10 @@
         (recur (get cmd-stack (:stack-ptr @registers)))))))
 
 (defn inc-stack-ptr
-  ""
   []
   (swap! registers update :stack-ptr inc))
 
 (defn incr
-  ""
   [reg]
   (inc-stack-ptr)
   (swap! registers update reg inc))
@@ -82,8 +78,9 @@
     (jmp offset)
     (inc-stack-ptr)))
 
-;;Solution below, uncomment/comment out the registers code above and rerun for the part seeking an answer to
+;;Solution below, uncomment/comment out the registers code above and rerun for the part seeking an answer to part 2
 (->> (munge-data puzzle-input)
      process-cmds)
+
 
 ;;part 1 = 255, part 2 = 334
