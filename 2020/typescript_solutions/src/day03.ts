@@ -1,4 +1,3 @@
-import { log } from 'console';
 import * as fs from 'fs';
 
 const fileday3rows = fs.readFileSync('resources/day03_input.txt', 'utf-8').split('\n')
