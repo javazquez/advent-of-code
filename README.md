@@ -1,2 +1,2 @@
 # advent-of-code
-solutions for https://adventofcode.com/ puzzlez
+solutions for https://adventofcode.com/ puzzles
