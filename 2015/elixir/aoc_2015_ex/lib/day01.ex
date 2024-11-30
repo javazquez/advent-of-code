@@ -1,6 +1,5 @@
 defmodule Day01 do
   # An opening parenthesis, (, means he should go up one floor, and a closing parenthesis, ), means he should go down one floor.
-  # last floor
 
   def navigate_floor([], current_floor_level) do
     current_floor_level
