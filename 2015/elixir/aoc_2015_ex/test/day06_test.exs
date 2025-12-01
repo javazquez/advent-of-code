@@ -16,7 +16,6 @@ defmodule Day06Test do
   end
 
   test "part 1" do
-    # use a cond
     assert 569_999 = read_input() |> solve_par1()
   end
 

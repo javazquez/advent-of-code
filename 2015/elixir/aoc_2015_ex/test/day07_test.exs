@@ -26,7 +26,6 @@ defmodule Day07Test do
     46065 = read_input() |> solve_part1()
   end
 
-  # a = 46065
   test "part 2" do
     14134 = read_input() |> solve_part2()
   end
